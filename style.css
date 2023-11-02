@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Quicksand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@5  00&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +12,7 @@
 .nav {
   height: 100px;
   width: 100%;
-  background-color: #8696fe42;
+  background-color: #1e1e1e;
   display: flex;
   align-items: center;
   padding: 0 4% 0 8%;
@@ -32,6 +33,7 @@
 .menu-icon {
   height: 55px;
   display: none;
+  filter: invert(1);
 }
 .nav h4 {
   text-transform: uppercase;
@@ -39,7 +41,7 @@
 }
 .nav h1 {
   text-transform: uppercase;
-  font-weight: 900;
+  font-weight: 700;
 
   font-family: "Cutive Mono", monospace;
 }
@@ -119,10 +121,13 @@
   animation: scroll 40s linear infinite;
 }
 
-#scroller-in {
-  display: inline-block;
-  white-space: nowrap;
-  animation: scroll 40s linear infinite;
+#scroller-in div {
+  display: inline-flex;
+  justify-content: center;
+  margin: 4rem;
+  width: 14rem;
+  height: 14rem;
+  border-radius: 1rem;
 }
 #scroller-in-2 {
   display: inline-block;
@@ -160,19 +165,47 @@
   background-color: #00000030;
   z-index: 10;
 }
-
+.navName {
+  display: none;
+}
 @media only screen and (max-width: 600px) {
-  #page-1 img {
-    margin-top: 2rem;
-    height: 30%;
+  #page-1 {
+    background-image: url(./assets/s1.png);
+    width: 100%;
+    background-color: #000000;
+    padding-top: 70px;
+    justify-content: flex-start;
   }
   #page-1 h2 {
-    margin-top: 1rem;
+    /* font-family: poppins; */
+    color: aliceblue;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+  }
+  #main {
+    background-color: #000000;
+  }
+  #page-1 img {
+    margin: 2rem 0 1rem;
+    height: 20%;
+
+  }
+  #page-1 h2 {
+    text-transform: uppercase;
+    letter-spacing: 2.4px;
+    margin-top: 0;
     font-size: 1.7rem;
     font-weight: 750;
     /* color: transparent; */
-    font-family: "Cutive Mono", monospace;
-    /* -webkit-text-stroke: 1px #0080d0; */
+    /* font-family: "Cutive Mono", monospace; */
+    /* -webkit-text-stroke: 0.3px #0080d0; */
+  }
+  .nav {
+    height: 70px;
+    font-family: "Poppins", sans-serif;
+  }
+  .nav h1 {
+    font-family: "Poppins", sans-serif;
   }
   .nav .links {
     display: none;
@@ -182,6 +215,28 @@
   }
   .logo-name {
     gap: 1rem;
+  }
+  .navName {
+    display: initial;
+    color: aliceblue;
+  }
+  .navNameDekstop {
+    display: none;
+  }
+  #TVIR {
+    /* background: #fcfcfc; */
+    color: #ffc400;
+    display: block;
+    margin-top: 10%;
+    font-size: 2rem;
+    /* font-weight: 900; */
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-style: italic;
+    padding: 0 7%;
+  }
+  .navName{
+    font-size: 1.7rem;
   }
 }
 

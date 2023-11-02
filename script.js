@@ -25,28 +25,30 @@ gsap.to(".nav", {
 gsap.to(".nav .hidden", {
   display: "initial",
   height: "70px",
-  duration: 1,
+  duration: 0.5,
   scrollTrigger: {
     trigger: ".nav img",
     scroller: "body",
     // markers:true,
     start: "top -50%",
     end: "top -60",
-    scrub: 1,
+    scrub: 0.5,
   },
 });
-gsap.to("#cursor-blur", {
-  display: "initial",
-  duration: 1,
+gsap.to(".nav .navName", {
+  display: "none",
+  // height: "70px",
+  // duration: 0.5,
   scrollTrigger: {
-    trigger: "#cursor-blur",
+    trigger: ".nav img",
     scroller: "body",
     // markers:true,
-    start: "top -50%",
-    end: "top -60",
-    scrub: 3,
+    start: "top -50",
+    end: "top -51",
+    scrub: 0.1,
   },
 });
+
 gsap.to("#main", {
   backgroundColor: "#11009E",
   scrollTrigger: {
@@ -86,7 +88,4 @@ gsap.to(".box", {
     end: "top -60",
     scrub: 1,
   },
-});
-gsap.to(".box", {
- 
 });
